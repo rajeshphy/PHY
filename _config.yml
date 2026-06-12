@@ -1,0 +1,35 @@
+title: Rajesh Kumar
+email: kr.rajesh.phy@gmail.com
+description: Lecture Notes
+url: "https://rajeshphy.github.io"
+baseurl: ""
+author:
+  name: Rajesh Kumar
+contact:
+  whatsapp: "https://chat.whatsapp.com/IU67roYMMwy161ERjJaZUS?s=cl&p=a&ilr=2&amv=2"
+
+markdown: kramdown
+permalink: /:title/
+paginate: 10
+paginate_path: "/page:num/"
+
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+feed:
+  path: feed.xml
+
+comments:
+  provider: disqus
+  disqus:
+    shortname: consultt-github-io
+
+defaults:
+  - scope:
+      path: "_posts"
+      type: posts
+    values:
+      layout: post

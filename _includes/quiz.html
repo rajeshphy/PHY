@@ -1,0 +1,26 @@
+<section class="quiz-page" aria-label="Interactive quiz">
+  {% if include.eyebrow %}
+    <p class="eyebrow">{{ include.eyebrow }}</p>
+  {% endif %}
+  {% if include.heading %}
+    <h1>{{ include.heading }}</h1>
+  {% endif %}
+  {% if include.lead %}
+    <p class="quiz-lead">{{ include.lead }}</p>
+  {% endif %}
+
+  <div {% if include.id %}id="{{ include.id }}"{% endif %} class="quiz-shell physics-quiz">
+    <textarea class="quiz-source" hidden>{{ include.source | strip | escape }}</textarea>
+    <div class="quiz-topline">
+      <span class="quiz-count">Question 1</span>
+      <span class="quiz-score-mini">Score 0</span>
+    </div>
+    <div class="quiz-progress" aria-hidden="true"><span class="quiz-progress-fill"></span></div>
+    <h2 class="quiz-question"></h2>
+    <div class="quiz-options"></div>
+    <p class="quiz-feedback" aria-live="polite"></p>
+    <button class="quiz-next" type="button" disabled>Next</button>
+  </div>
+</section>
+
+<script src="{{ '/assets/js/physics-quiz.js' | relative_url }}" defer></script>
