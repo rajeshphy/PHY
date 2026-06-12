@@ -34,3 +34,4 @@ defaults:
     values:
       layout: post
       math: true
+      comments: false
