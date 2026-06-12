@@ -321,7 +321,7 @@ nav,
   background:
     linear-gradient(90deg, rgba(5, 10, 12, .54) 0%, rgba(5, 10, 12, .20) 50%, rgba(5, 10, 12, .56) 100%),
     linear-gradient(0deg, rgba(5, 10, 12, .34), rgba(5, 10, 12, .04)),
-    url("/assets/images/physics-formula-board-1920x1080.svg") center / cover;
+    var(--hero-bg) center / cover;
   color: white;
   text-align: center;
 }
