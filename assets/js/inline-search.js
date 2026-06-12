@@ -3,14 +3,21 @@
   const toggle = document.querySelector(".nav-search-toggle");
   const input = document.getElementById("nav-search-input");
   const results = document.getElementById("nav-search-results");
+
   if (!nav || !toggle || !input || !results) return;
 
-  const script = document.currentScript;
-  const searchUrl = script ? script.dataset.search : "/search.json";
+  const script = document.querySelector("script[data-search][src*='inline-search']");
+  const searchUrl = script ? script.getAttribute("data-search") : null;
+
   let posts = null;
 
+  if (!searchUrl) {
+    console.error("Inline search index path not found.");
+    return;
+  }
+
   function escapeHtml(value) {
-    return String(value).replace(/[&<>"']/g, (char) => ({
+    return String(value || "").replace(/[&<>"']/g, (char) => ({
       "&": "&amp;",
       "<": "&lt;",
       ">": "&gt;",
@@ -21,9 +28,20 @@
 
   async function loadPosts() {
     if (posts) return posts;
-    posts = await fetch(searchUrl)
-      .then((response) => response.json())
-      .catch(() => []);
+
+    try {
+      const response = await fetch(searchUrl);
+
+      if (!response.ok) {
+        throw new Error("Search index not found: " + searchUrl);
+      }
+
+      posts = await response.json();
+    } catch (error) {
+      console.error(error);
+      posts = [];
+    }
+
     return posts;
   }
 
@@ -42,20 +60,32 @@
 
   function render(query) {
     const needle = query.trim().toLowerCase();
+
     if (!needle) {
       results.innerHTML = "";
       return;
     }
 
-    const matches = posts.filter((post) => {
-      return [post.title, post.tags, post.content].join(" ").toLowerCase().includes(needle);
-    }).slice(0, 6);
+    const matches = posts
+      .filter((post) => {
+        return [
+          post.title || "",
+          Array.isArray(post.tags) ? post.tags.join(" ") : post.tags || "",
+          post.content || ""
+        ]
+          .join(" ")
+          .toLowerCase()
+          .includes(needle);
+      })
+      .slice(0, 6);
 
     results.innerHTML = matches.length
       ? matches.map((post) => `
           <a href="${post.url}">
             <strong>${escapeHtml(post.title)}</strong>
-            <small>${escapeHtml(post.date)} · ${escapeHtml(post.tags)}</small>
+            <small>${escapeHtml(post.date)} · ${escapeHtml(
+              Array.isArray(post.tags) ? post.tags.join(", ") : post.tags || ""
+            )}</small>
           </a>
         `).join("")
       : "<p>No matching posts found.</p>";
@@ -63,6 +93,7 @@
 
   toggle.addEventListener("click", async () => {
     await loadPosts();
+
     if (nav.classList.contains("search-open")) {
       closeSearch();
     } else {
