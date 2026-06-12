@@ -33,34 +33,48 @@ title: Home
   </article>
 </section> -->
 
-<section class="post-list" aria-label="Current study page">
+
+
+
+<section class="post-list premium-post-list" aria-label="Current study page">
   <div class="section-heading">
-    <!-- <p class="eyebrow">Current Desk</p> -->
     <h2>Blog Posts 👇</h2>
   </div>
+
   {% assign home_posts = paginator.posts | default: site.posts %}
+
   {% for post in home_posts %}
     {% assign read_minutes = post.content | number_of_words | divided_by: 180 | plus: 1 %}
-    <article class="desk-card">
-      <div class="desk-card-main">
-        <p class="eyebrow">{{ post.categories | first | default: "Study" }}</p>
-        <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-        <p>{{ post.summary | default: post.excerpt | strip_html | normalize_whitespace | truncate: 190 }}</p>
-        <div class="tag-row">
-          {% for tag in post.tags limit: 3 %}
-            <span>{{ tag }}</span>
-          {% endfor %}
+
+    <article class="premium-post-card">
+      <a class="premium-post-card-link" href="{{ post.url | relative_url }}">
+        <div class="premium-post-topline">
+          <span>{{ post.categories | first | default: "Study" }}</span>
+          <span>{{ post.date | date: "%d %b %Y" }}</span>
+          <span>{{ read_minutes }} min read</span>
         </div>
-      </div>
-      <aside class="desk-card-meta" aria-label="Post details">
-        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d %b %Y" }}</time>
-        <strong>{{ read_minutes }} min read</strong>
-        <small>Updated study page</small>
-        <a class="text-link" href="{{ post.url | relative_url }}">Enter archive</a>
-      </aside>
+
+        <h2>{{ post.title }}</h2>
+
+        <p>
+          {{ post.summary | default: post.excerpt | strip_html | normalize_whitespace | truncate: 145 }}
+        </p>
+
+        {% if post.tags.size > 0 %}
+          <div class="premium-tag-row">
+            {% for tag in post.tags limit: 3 %}
+              <span>{{ tag }}</span>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </a>
     </article>
   {% endfor %}
 </section>
+
+
+
+
 
 {% if paginator.total_pages > 1 %}
   <nav class="pager" aria-label="Pagination">
