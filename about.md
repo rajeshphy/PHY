@@ -13,11 +13,11 @@ permalink: /about/
       <p class="cv-kicker">Curriculum Vitae</p>
       <h1>Rajesh Kumar</h1>
       <p class="cv-role">Assistant Professor</p>
-      <p class="cv-summary">Physics faculty at S.K.M. University, Dumka and IIT Kanpur alumnus with academic interests in quantum mechanics.</p>
+      <p class="cv-summary">
+  Assistant Professor of Physics at S.K.M. University, Dumka; IIT Kanpur alumnus, with academic interests in computational physics, quantum mechanics, and scientific computing.
+      </p>
       <div class="cv-contact">
-        <a href="mailto:{{ site.email }}">Email</a>
-        <a href="https://www.iitk.ac.in/" target="_blank" rel="noopener">IIT Kanpur alumnus</a>
-        <a href="https://skmu.ac.in/" target="_blank" rel="noopener">S.K.M. University, Dumka</a>
+        <a href="mailto:{{ site.email }}">kr.rajesh.phy@gmail.com</a>
       </div>
     </div>
   </header>
