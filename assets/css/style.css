@@ -351,12 +351,14 @@ nav,
   padding: 0 0 64px;
 }
 
+
+
 .hero {
   position: relative;
   display: grid;
   place-items: center;
-  min-height: min(520px, calc(100vh - 120px));
-  padding: clamp(52px, 7vw, 86px) max(24px, calc((100vw - 1080px) / 2)) 70px;
+  min-height: min(260px, calc((100vh - 120px) * 0.5));
+  padding: clamp(26px, 3.5vw, 43px) max(24px, calc((100vw - 1080px) / 2)) 35px;
   overflow: hidden;
   background:
     linear-gradient(90deg, rgba(5, 10, 12, .54) 0%, rgba(5, 10, 12, .20) 50%, rgba(5, 10, 12, .56) 100%),
@@ -365,6 +367,8 @@ nav,
   color: white;
   text-align: center;
 }
+
+
 
 .hero h1,
 .post h1,
@@ -2403,8 +2407,8 @@ th {
   }
 
   .hero {
-    min-height: 420px;
-    padding: 58px 18px 54px;
+    min-height: 210px;
+    padding: 29px 18px 27px;
     background-position: center;
   }
 

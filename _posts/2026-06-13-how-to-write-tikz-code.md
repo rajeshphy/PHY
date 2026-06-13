@@ -2,7 +2,7 @@
 title: "How To Write TikZ Code"
 summary: "A compact demonstration of writing TikZ source and showing the rendered figure in the same post."
 date: 2026-06-13 00:00:00 +0530
-categories: documentation
+categories: doc
 tags:
   - tikz
   - documentation

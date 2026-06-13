@@ -2,11 +2,11 @@
 title: "How To Write Quiz"
 summary: "A reusable quiz-writing demonstration using simple Q, A, B, C, D, ANSWER, and EXPLAIN lines with LaTeX support."
 date: 2026-06-13 00:20:00 +0530
-categories: documentation
+categories: doc
 tags:
   - quiz
   - interactive
-  - documentation
+  - doc
 permalink: /how-to-write-quiz/
 math: true
 ---
