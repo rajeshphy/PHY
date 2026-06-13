@@ -8,7 +8,7 @@
   </a>
   <nav class="main-nav" aria-label="Main navigation">
     <a {% if page.url == "/" %}class="active"{% endif %} href="{{ '/' | relative_url }}">Home</a>
-    <a {% if page.url == "/posts/" %}class="active"{% endif %} href="{{ '/posts/' | relative_url }}">Posts</a>
+    <a {% if page.url == "/about/" %}class="active"{% endif %} href="{{ '/about/' | relative_url }}">About</a>
     <a {% if page.url == "/tags/" %}class="active"{% endif %} href="{{ '/tags/' | relative_url }}">Tags</a>
     <button class="nav-search-toggle" type="button" aria-expanded="false" aria-controls="nav-search-input">Search</button>
     <label class="nav-search" aria-label="Search posts">
@@ -18,15 +18,15 @@
   </nav>
   <div class="icon-row header-icons" aria-label="Contact links">
     <a class="icon-link" href="mailto:{{ site.email }}" aria-label="Email Rajesh Kumar">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>
+      <img src="{{ '/assets/icons/icon-email-nav.svg' | relative_url }}" alt="" aria-hidden="true">
     </a>
     {% if site.contact.whatsapp %}
       <a class="icon-link" href="{{ site.contact.whatsapp }}" aria-label="WhatsApp group">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4a8 8 0 0 0-6.8 12.2L4 20l3.9-1.1A8 8 0 1 0 12 4Z"/><path d="M9.3 8.7c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.6c.1.3.1.5-.1.7l-.4.5c.7 1.2 1.6 2.1 2.9 2.7l.5-.6c.2-.2.4-.3.7-.2l1.6.7c.3.1.4.3.4.6v.5c0 .4-.2.7-.6.9-.6.3-1.5.4-2.8-.1-2.7-1-4.8-3.1-5.8-5.8-.5-1.2-.3-2.2 0-2.8Z"/></svg>
+        <img src="{{ '/assets/icons/icon-whatsapp-nav.svg' | relative_url }}" alt="" aria-hidden="true">
       </a>
     {% endif %}
     <a class="icon-link" href="{{ '/feed.xml' | relative_url }}" aria-label="RSS feed">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5c7.7 0 14 6.3 14 14"/><path d="M5 11c4.4 0 8 3.6 8 8"/><path d="M6 18h.1"/></svg>
+      <img src="{{ '/assets/icons/icon-rss-nav.svg' | relative_url }}" alt="" aria-hidden="true">
     </a>
   </div>
 </header>
