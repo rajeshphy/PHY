@@ -7,10 +7,10 @@ permalink: /research/
 <section class="post-list premium-post-list research-archive" aria-label="Research articles">
   <div class="section-heading">
     <h2>Research Articles</h2>
-    <p>Only posts tagged with <strong>research</strong> are listed here.</p>
+    <p>Only posts filed under the <strong>research</strong> category are listed here.</p>
   </div>
 
-  {% assign research_posts = site.posts | where_exp: "post", "post.tags contains 'research'" %}
+  {% assign research_posts = site.posts | where_exp: "post", "post.categories contains 'research'" %}
 
   {% if research_posts.size > 0 %}
     {% assign grouped_posts = research_posts | group_by_exp: "post", "post.date | date: '%Y'" %}
@@ -47,7 +47,7 @@ permalink: /research/
   {% else %}
     <section class="note-panel">
       <h2>No Research Articles Yet</h2>
-      <p>When a post is tagged with <strong>research</strong>, it will appear here automatically in yearwise order.</p>
+      <p>When a post is filed under the <strong>research</strong> category, it will appear here automatically in yearwise order.</p>
     </section>
   {% endif %}
 </section>

@@ -1,0 +1,80 @@
+/* =========================================================
+   ICONS
+   ========================================================= */
+
+.icon-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon-link {
+  display: inline-grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  margin: 0;
+  border: 1px solid rgba(35, 31, 26, .18);
+  border-radius: 50%;
+  background:
+    linear-gradient(135deg, rgba(255, 253, 248, .98), rgba(248, 244, 236, .9));
+  color: var(--ink);
+  text-decoration: none;
+  box-shadow:
+    0 14px 34px rgba(35, 31, 26, .14),
+    inset 0 1px 0 rgba(255, 255, 255, .9);
+}
+
+.icon-link svg,
+.icon-link img {
+  width: 31px;
+  height: 31px;
+}
+
+.icon-link img {
+  display: block;
+  max-width: 31px;
+  max-height: 31px;
+  object-fit: contain;
+  filter: contrast(1.35) saturate(1.05);
+}
+
+.icon-link svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.icon-link:hover {
+  color: white;
+  background: var(--accent);
+  border-color: var(--accent);
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.header-icons .icon-link {
+  width: 66px;
+  height: 66px;
+  background:
+    radial-gradient(circle at 35% 25%, rgba(255, 255, 255, 1), rgba(255, 251, 244, .92));
+}
+
+.header-icons .icon-link img {
+  width: 42px;
+  height: 42px;
+  max-width: 42px;
+  max-height: 42px;
+  filter: drop-shadow(0 3px 5px rgba(35, 31, 26, .13));
+}
+
+.header-icons .icon-link:hover {
+  background:
+    radial-gradient(circle at 35% 25%, rgba(255, 255, 255, 1), rgba(252, 246, 236, .96));
+  border-color: rgba(190, 134, 38, .38);
+  box-shadow:
+    0 18px 38px rgba(35, 31, 26, .18),
+    inset 0 1px 0 rgba(255, 255, 255, .96);
+}

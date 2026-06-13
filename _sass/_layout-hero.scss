@@ -1,0 +1,149 @@
+/* =========================================================
+   LAYOUT + HERO
+   ========================================================= */
+
+.wrap {
+  width: 100%;
+  padding: 0 0 64px;
+}
+
+
+
+.hero {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: min(260px, calc((100vh - 120px) * 0.5));
+  padding: clamp(26px, 3.5vw, 43px) max(24px, calc((100vw - 1080px) / 2)) 35px;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(5, 10, 12, .54) 0%, rgba(5, 10, 12, .20) 50%, rgba(5, 10, 12, .56) 100%),
+    linear-gradient(0deg, rgba(5, 10, 12, .34), rgba(5, 10, 12, .04)),
+    var(--hero-bg) center / cover;
+  color: white;
+  text-align: center;
+}
+
+
+
+.hero h1,
+.post h1,
+.page h1 {
+  margin: 0 0 10px;
+  font-size: clamp(2.75rem, 6.4vw, 5.9rem);
+  line-height: .98;
+  text-wrap: balance;
+}
+
+.hero h1 {
+  color: #fff;
+  text-shadow:
+    0 2px 0 rgba(0, 0, 0, .42),
+    0 10px 34px rgba(0, 0, 0, .82),
+    0 0 28px rgba(0, 0, 0, .62);
+}
+
+.hero-copy {
+  position: relative;
+  max-width: 900px;
+  margin-inline: auto;
+  padding: clamp(18px, 3vw, 28px);
+  border-radius: 18px;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, .42) 0%, rgba(0, 0, 0, .22) 48%, transparent 72%);
+}
+
+.hero .eyebrow {
+  color: rgba(255, 255, 255, .72);
+}
+
+.hero-subtitle,
+.summary {
+  max-width: 680px;
+  margin-inline: auto;
+  color: rgba(255, 255, 255, .82);
+  font-size: clamp(1.08rem, 1.6vw, 1.38rem);
+  line-height: 1.55;
+}
+
+.hero-subtitle {
+  color: #fff1c2;
+  text-shadow:
+    0 2px 0 rgba(0, 0, 0, .36),
+    0 7px 22px rgba(0, 0, 0, .85);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 12px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, .18);
+  background: linear-gradient(180deg, #0e7d78, #075653);
+  color: white;
+  box-shadow:
+    0 14px 0 #043f3d,
+    0 26px 42px rgba(0, 0, 0, .38),
+    inset 0 1px 0 rgba(255, 255, 255, .35);
+}
+
+.button:hover {
+  text-decoration: none;
+  transform: translateY(-3px);
+  box-shadow:
+    0 17px 0 #043f3d,
+    0 30px 46px rgba(0, 0, 0, .44),
+    inset 0 1px 0 rgba(255, 255, 255, .38);
+}
+
+.button:active {
+  transform: translateY(8px);
+  box-shadow:
+    0 5px 0 #043f3d,
+    0 14px 24px rgba(0, 0, 0, .36),
+    inset 0 1px 0 rgba(255, 255, 255, .25);
+}
+
+.hero .button {
+  color: white;
+}
+
+.button.secondary,
+.hero .button.secondary {
+  background: linear-gradient(180deg, #f4d06f, #b98522);
+  color: #1b1d21;
+  border: 1px solid rgba(127, 90, 20, .28);
+}
+
+.hero .button.secondary {
+  border-color: rgba(255, 245, 204, .75);
+  box-shadow:
+    0 14px 0 #7f5a14,
+    0 26px 42px rgba(0, 0, 0, .38),
+    inset 0 1px 0 rgba(255, 255, 255, .62);
+}
+
+.hero .button.secondary:hover {
+  box-shadow:
+    0 17px 0 #7f5a14,
+    0 30px 46px rgba(0, 0, 0, .44),
+    inset 0 1px 0 rgba(255, 255, 255, .68);
+}
+
+.hero .button.secondary:active {
+  box-shadow:
+    0 5px 0 #7f5a14,
+    0 14px 24px rgba(0, 0, 0, .36),
+    inset 0 1px 0 rgba(255, 255, 255, .42);
+}
+

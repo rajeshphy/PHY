@@ -10,7 +10,6 @@ tags:
   - practicals
   - template
 permalink: /msc-practicals-template/
-math: true
 hidden: true
 ---
 

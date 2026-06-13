@@ -10,7 +10,6 @@ tags:
   - old-semester
   - template
 permalink: /msc-sem-ii-old-template/
-math: true
 hidden: true
 ---
 

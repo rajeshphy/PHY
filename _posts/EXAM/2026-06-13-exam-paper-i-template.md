@@ -9,7 +9,6 @@ tags:
   - paper-i
   - template
 permalink: /exam-paper-i-template/
-math: true
 hidden: true
 ---
 

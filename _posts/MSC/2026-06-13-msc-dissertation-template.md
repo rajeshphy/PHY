@@ -10,7 +10,6 @@ tags:
   - dissertation
   - template
 permalink: /msc-dissertation-template/
-math: true
 hidden: true
 ---
 

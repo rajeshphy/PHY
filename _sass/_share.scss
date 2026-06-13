@@ -1,0 +1,94 @@
+/* =========================================================
+   SHARE STRIP
+   ========================================================= */
+
+.share-strip {
+  width: min(920px, calc(100% - 32px));
+  margin: 30px auto 0;
+  padding: 16px 18px;
+  text-align: center;
+  border-top: 1px solid rgba(228, 216, 200, .95);
+}
+
+.share-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.share-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  min-height: 58px;
+  padding: 0;
+  border: 1px solid rgba(228, 216, 200, .78);
+  border-radius: 50%;
+  color: var(--ink);
+  background: rgba(255, 253, 248, .86);
+  box-shadow:
+    0 14px 32px rgba(35, 31, 26, .09),
+    inset 0 1px 0 rgba(255, 255, 255, .9);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.share-button:hover {
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+.share-button svg,
+.share-button img {
+  width: 30px;
+  height: 30px;
+}
+
+.share-button img {
+  display: block;
+  object-fit: contain;
+}
+
+.share-button svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.share-button span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.share-button.instagram {
+  color: #7b245f;
+  background: linear-gradient(135deg, #fff7fb, #f7e8ff);
+}
+
+.share-button.facebook {
+  color: #174ea6;
+  background: linear-gradient(135deg, #f6f9ff, #e7efff);
+}
+
+.share-button.whatsapp {
+  color: #087c54;
+  background: linear-gradient(135deg, #f2fff8, #e4f8ed);
+}
+
+.share-status {
+  min-height: 20px;
+  margin: 6px 0 0;
+  color: var(--muted);
+  font: 13px/1.4 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+

@@ -1,0 +1,110 @@
+/* =========================================================
+   PREMIUM COMPACT POST LIST
+   ========================================================= */
+
+.premium-post-list {
+  display: grid;
+  gap: 16px;
+}
+
+.premium-post-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(155, 130, 90, .24);
+  border-radius: 22px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, .94), rgba(250, 244, 232, .82)),
+    radial-gradient(circle at top left, rgba(0, 108, 104, .10), transparent 34%);
+  box-shadow:
+    0 18px 42px rgba(54, 44, 28, .08),
+    inset 0 1px 0 rgba(255, 255, 255, .85);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+
+.premium-post-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 5px;
+  background: linear-gradient(180deg, #006b68, #c7a35c);
+  opacity: .9;
+}
+
+.premium-post-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(0, 108, 104, .36);
+  box-shadow:
+    0 24px 56px rgba(54, 44, 28, .13),
+    inset 0 1px 0 rgba(255, 255, 255, .92);
+}
+
+.premium-post-card-link {
+  display: block;
+  padding: 20px 24px 20px 28px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.premium-post-card-link:hover {
+  text-decoration: none;
+}
+
+.premium-post-topline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 9px;
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: #6b6258;
+}
+
+.premium-post-topline span {
+  display: inline-flex;
+  align-items: center;
+}
+
+.premium-post-topline span:not(:last-child)::after {
+  content: "•";
+  margin-left: 8px;
+  color: rgba(0, 108, 104, .72);
+}
+
+.premium-post-card h2 {
+  margin: 0;
+  font-size: clamp(1.35rem, 2.5vw, 2rem);
+  line-height: 1.12;
+  letter-spacing: -.025em;
+  color: #1f2229;
+}
+
+.premium-post-card p {
+  margin: 9px 0 0;
+  max-width: 780px;
+  font-size: 1rem;
+  line-height: 1.45;
+  color: #6b6258;
+}
+
+.premium-tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.premium-tag-row span {
+  padding: 5px 10px;
+  border: 1px solid rgba(0, 108, 104, .22);
+  border-radius: 999px;
+  background: rgba(0, 108, 104, .055);
+  font-size: .78rem;
+  font-weight: 800;
+  color: #006b68;
+}
+

@@ -9,7 +9,7 @@ title: Home
     <h1>Physics</h1>
     <p class="hero-subtitle">Curated lecture notes, LaTeX derivations, and diagram-rich research resources.</p>
     <div class="hero-actions">
-      <a class="button" href="{{ '/open-notes/' | relative_url }}">Notes</a>
+      <a class="button" href="{{ '/notes/' | relative_url }}">Notes</a>
       <a class="button secondary" href="{{ '/research/' | relative_url }}">Research</a>
     </div>
   </div>
@@ -81,11 +81,30 @@ title: Home
 {% if paginator.total_pages > 1 %}
   <nav class="pager" aria-label="Pagination">
     {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path | relative_url }}">Newer</a>
+      <a class="pager-control pager-prev" href="{{ paginator.previous_page_path | relative_url }}" aria-label="Newer posts">
+        <span class="pager-icon" aria-hidden="true">&larr;</span>
+        <span>Newer</span>
+      </a>
+    {% else %}
+      <span class="pager-control pager-prev is-disabled" aria-hidden="true">
+        <span class="pager-icon">&larr;</span>
+        <span>Newer</span>
+      </span>
     {% endif %}
-    <span>Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+    <span class="pager-status" aria-current="page">
+      <small>Page</small>
+      <strong>{{ paginator.page }} / {{ paginator.total_pages }}</strong>
+    </span>
     {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path | relative_url }}">Older</a>
+      <a class="pager-control pager-next" href="{{ paginator.next_page_path | relative_url }}" aria-label="Older posts">
+        <span>Older</span>
+        <span class="pager-icon" aria-hidden="true">&rarr;</span>
+      </a>
+    {% else %}
+      <span class="pager-control pager-next is-disabled" aria-hidden="true">
+        <span>Older</span>
+        <span class="pager-icon">&rarr;</span>
+      </span>
     {% endif %}
   </nav>
 {% endif %}

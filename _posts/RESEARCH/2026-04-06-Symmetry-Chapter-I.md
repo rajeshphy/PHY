@@ -1,0 +1,399 @@
+---
+title: Foundations of Symmetry in Quantum Theory
+date: 2026-04-06 07:40:00 +0530
+categories: research
+tags:
+  - quantum-symmetry
+  - wigner-theorem
+  - group-theory
+  - quantum-mechanics
+permalink: "/Symmetry-I/"
+---
+Symmetry is fundamental to physics today, because it provides a common language bridging abstract mathematics with observable phenomena. In classical mechanics, symmetry provides the basis for the invariance of physical laws under rotation; and symmetry has become a central organizing principle - connecting various areas in physics - from very deep, structural constraints in quantum mechanics, through the use of quantum mechanics to define mathematically the structure of observed particles.
+
+When quantum mechanics was developed, physicists began moving the focus of symmetry from geometric invariance to defining symmetry in terms of the invariance of measured results, in particular, the probabilities of outcomes as calculated based on state vectors. Wigner's contribution to quantum symmetry provides a perspective and framework for space and linear operators, clarifying how and why Hilbert space and linear operators are integral to quantum theory. The path up to Wigner's work reflects a transition from intuitive understanding of symmetry to a clearly defined, operator-based method for creating a set of mathematical and conceptual foundations for quantum symmetry.
+
+This chapter will develop the conceptual and mathematical foundations for symmetry as it relates to quantum mechanics, showing how unitary and antiunitary transformations, discrete and continuous symmetries, and their group representation of symmetry provide the foundational language for continued study of quantum mechanics through concepts such as Lie algebras and gauge theories, which are important for understanding current and future developments in particle physics and quantum information science.
+
+## 1.1 Intuition: What is a Symmetry?
+
+In everyday language, symmetry refers to a transformation that leaves an object looking the same. A circle, for instance, is unchanged under rotation about its center. However, in physics, symmetry is not about visual appearance—it is about **indistinguishability of physical outcomes**.
+
+Consider a physical system described by a state $\phi$. If we transform this state into another state and all measurable quantities remain unchanged, then this transformation is a **symmetry**.
+
+The key idea is:
+
+> A symmetry is a transformation that does not change the results of any experiment.
+
+Thus, symmetry is fundamentally tied to **observables**, not appearances.
+
+---
+
+## 1.2 Symmetry as a Transformation on States
+
+### Formal Definition
+
+Let $\mathcal{H}$ be the Hilbert space of quantum states. A symmetry is a map:
+
+
+$$
+\phi \mapsto U\phi
+$$
+
+
+where $U$ is a bijection on $\mathcal{H}$ such that physical predictions remain invariant.
+
+### Why Hilbert Space?
+
+Quantum states are vectors in a Hilbert space, and physical predictions are extracted from inner products. Therefore, any transformation that claims to be a symmetry must preserve the structure of this space.
+
+### Transition Probabilities
+
+The probability amplitude between two states $\phi$ and $\psi$ is given by $(\phi, \psi)$, and the measurable probability is:
+
+
+$$
+|(\phi, \psi)|^2
+$$
+
+
+Thus, a symmetry must preserve:
+
+
+$$
+|(\phi, \psi)|^2 = |(U\phi, U\psi)|^2
+$$
+
+
+This requirement is the starting point for all of quantum symmetry theory.
+
+---
+
+## 1.3 Wigner’s Theorem
+
+### Statement
+
+Any transformation that preserves transition probabilities must be represented as:
+
+
+$$
+\phi \mapsto U\phi
+$$
+
+
+where $U$ is either:
+
+- a **unitary operator**, or  
+- an **antiunitary operator**
+
+### Why is this remarkable?
+
+This result is not assumed—it is derived. It tells us that the structure of quantum mechanics is highly constrained.
+
+### Sketch of Reasoning
+
+1. Start with probability preservation:
+
+   
+$$
+|(\phi, \psi)| = |(U\phi, U\psi)|
+$$
+
+2. This implies preservation of angles between vectors.
+
+3. Such transformations must preserve the Hilbert space structure up to a phase.
+
+4. The only such maps are unitary or antiunitary.
+
+Thus, symmetry forces a very specific mathematical structure.
+
+---
+
+## 1.4 Unitary Operators
+
+### Intuition
+
+A unitary operator represents a transformation that preserves lengths and angles in Hilbert space. It is the quantum analogue of a rotation.
+
+### Definition
+
+An operator $U$ is unitary if:
+
+
+$$
+(U\phi, U\psi) = (\phi, \psi)
+$$
+
+
+for all $\phi, \psi \in \mathcal{H}$.
+
+### Equivalent Condition
+
+This is equivalent to:
+
+
+$$
+U^\dagger U = I
+$$
+
+
+where $U^\dagger$ is the adjoint of $U$.
+
+### Derivation: Probability Preservation
+
+Using unitarity:
+
+
+$$
+|(U\phi, U\psi)|^2 = |(\phi, \psi)|^2
+$$
+
+
+Thus, all physical probabilities remain unchanged.
+
+### Physical Interpretation
+
+Unitary transformations correspond to:
+
+- Time evolution  
+- Rotations  
+- Translations  
+
+They represent **continuous symmetries** generated by infinitesimal transformations.
+
+---
+
+## 1.5 Antiunitary Operators
+
+### Intuition
+
+Some symmetries involve reversing processes, such as time reversal. These require complex conjugation, which cannot be achieved by linear operators.
+
+### Definition
+
+An operator $U$ is antiunitary if:
+
+
+$$
+(U\phi, U\psi) = (\psi, \phi)
+$$
+
+
+### Antilinearity
+
+Antiunitary operators satisfy:
+
+
+$$
+U(a\phi + b\psi) = a^* U\phi + b^* U\psi
+$$
+
+
+### Why Complex Conjugation?
+
+Time reversal must reverse phases in the Schrödinger equation, which introduces complex conjugation. This makes the operator antilinear.
+
+### Physical Example: Time Reversal
+
+- Reverses momentum and spin direction  
+- Requires complex conjugation  
+- Cannot be represented by a unitary operator  
+
+Thus, antiunitary operators are essential for capturing such symmetries.
+
+---
+
+## 1.6 Discrete Symmetries
+
+### Intuition
+
+Not all symmetries are continuous. Some occur in finite steps and cannot be generated infinitesimally.
+
+### Example: Parity
+
+Parity reverses spatial coordinates:
+
+
+$$
+\mathbf{x} \mapsto -\mathbf{x}
+$$
+
+
+### Action on Wavefunctions
+
+For a wavefunction $\psi(\mathbf{x})$:
+
+
+$$
+(P\psi)(\mathbf{x}) = \psi(-\mathbf{x})
+$$
+
+
+### Property
+
+Applying parity twice:
+
+
+$$
+P^2 = I
+$$
+
+
+### Physical Interpretation
+
+Parity tests whether physics is invariant under spatial reflection. It plays a key role in selection rules and conservation laws.
+
+---
+
+## 1.7 Continuous Symmetries: Toward Lie Groups
+
+### Intuition
+
+Continuous symmetries depend smoothly on parameters. For example, rotations depend on an angle $\theta$.
+
+### Mathematical Structure
+
+A continuous symmetry transformation can be written as:
+
+
+$$
+U(\theta)
+$$
+
+
+where $\theta$ varies continuously.
+
+### Infinitesimal Transformation
+
+For small $\theta$:
+
+
+$$
+U(\theta) = I + i\theta T + \mathcal{O}(\theta^2)
+$$
+
+
+where $T$ is the **generator** of the symmetry.
+
+### Physical Meaning
+
+Generators correspond to observable quantities:
+
+- Rotation generator → angular momentum  
+- Time translation → energy (Hamiltonian)  
+
+Thus, continuous symmetries lead directly to conserved quantities.
+
+---
+
+## 1.8 Internal and Spacetime Symmetries
+
+### Internal Symmetries
+
+These act on intrinsic properties of particles:
+
+
+$$
+\phi \mapsto U\phi
+$$
+
+
+Examples include:
+
+- Phase rotations ($U(1)$)  
+- Isospin ($SU(2)$)  
+- Color charge ($SU(3)$)  
+
+They do not affect spacetime coordinates.
+
+### Spacetime Symmetries
+
+These act on coordinates:
+
+- Translations  
+- Rotations  
+- Boosts  
+
+In relativistic physics, these form the **Poincaré group**.
+
+### Key Distinction
+
+- Internal symmetries act on **state components**  
+- Spacetime symmetries act on **arguments of states**
+
+---
+
+## 1.9 Representations of Symmetry Groups
+
+### Intuition
+
+A symmetry group describes transformations abstractly. To apply it in quantum mechanics, we must represent it as operators on Hilbert space.
+
+### Definition
+
+A representation is a map:
+
+
+$$
+g \mapsto U(g)
+$$
+
+
+such that group structure is preserved.
+
+### Projective Representations
+
+In quantum mechanics:
+
+
+$$
+U(g_1)U(g_2) = e^{i\theta(g_1,g_2)} U(g_1 g_2)
+$$
+
+
+### Why the Phase?
+
+Quantum states are defined up to a global phase. Therefore, exact equality is not required—only equality up to phase.
+
+---
+
+## 1.10 Central Extensions
+
+### Motivation
+
+Projective representations suggest that the true symmetry group is slightly larger.
+
+### Definition
+
+A central extension introduces an extra $U(1)$ factor:
+
+
+$$
+1 \longrightarrow U(1) \longrightarrow \tilde{G} \longrightarrow G \longrightarrow 1
+$$
+
+
+### Interpretation
+
+- $\tilde{G}$ is the “true” symmetry group  
+- The extra $U(1)$ encodes phase freedom  
+
+### Physical Example: Mass
+
+In nonrelativistic quantum mechanics, mass arises as a parameter from the central extension of the Galilean group.
+
+---
+
+## 1.11 Physical Meaning of Symmetry
+
+We can now summarize the conceptual structure:
+
+- A symmetry is a transformation of quantum states  
+- It preserves transition probabilities  
+- It must be unitary or antiunitary  
+- Continuous symmetries lead to generators and conservation laws  
+- Symmetries are realized through group representations  
+
+### Final Insight
+
+Symmetry defines what is **physically unobservable**.

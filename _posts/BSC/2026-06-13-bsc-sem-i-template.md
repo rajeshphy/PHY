@@ -10,7 +10,6 @@ tags:
   - semester
   - template
 permalink: /bsc-sem-i-template/
-math: true
 hidden: true
 ---
 

@@ -10,7 +10,6 @@ tags:
   - practicals
   - template
 permalink: /bsc-practicals-template/
-math: true
 hidden: true
 ---
 

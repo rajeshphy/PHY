@@ -9,7 +9,6 @@ tags:
   - physical-science
   - template
 permalink: /exam-physical-science-template/
-math: true
 hidden: true
 ---
 
