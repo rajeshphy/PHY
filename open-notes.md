@@ -27,7 +27,7 @@ permalink: /open-notes/
         <a href="{{ '/msc-sem-i-template/' | relative_url }}">Sem-I</a>
         <a href="{{ '/msc-sem-iii-template/' | relative_url }}">Sem-III</a>
         <a href="{{ '/msc-practicals-template/' | relative_url }}">Practicals</a>
-        <a href="{{ '/msc-dissertation-template/' | relative_url }}">PG Dissertation</a>
+        <a href="{{ '/msc-dissertation-template/' | relative_url }}">Dissertation</a>
       </div>
     </details>
 
