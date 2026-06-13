@@ -33,18 +33,18 @@ permalink: /about/
         <small>Rajesh Kumar, Rajesh Kumar Yadav, Avinash Khare</small>
         <span class="paper-doi">DOI 10.1016/j.aop.2024.169623</span>
       </a>
-      <a href="https://www.sciencedirect.com/science/article/abs/pii/S0003491625001265" target="_blank" rel="noopener">
-        <span class="paper-venue">Annals of Physics · Vol. 479 · Article 170045 · 2025</span>
-        <strong>Rational Extension of Anisotropic Harmonic Oscillator Potentials in Higher Dimensions</strong>
-        <small>Rajesh Kumar, Rajesh Kumar Yadav, Avinash Khare</small>
-        <span class="paper-doi">DOI 10.1016/j.aop.2025.170045</span>
-      </a>
       <details class="cv-more-publications">
         <summary>
           <span>More Research Papers</span>
-          <strong>1 additional paper</strong>
+          <strong>2 additional paper</strong>
         </summary>
         <div class="cv-more-publications-panel">
+          <a href="https://www.sciencedirect.com/science/article/abs/pii/S0003491625001265" target="_blank" rel="noopener">
+          <span class="paper-venue">Annals of Physics · Vol. 479 · Article 170045 · 2025</span>
+          <strong>Rational Extension of Anisotropic Harmonic Oscillator Potentials in Higher Dimensions</strong>
+          <small>Rajesh Kumar, Rajesh Kumar Yadav, Avinash Khare</small>
+          <span class="paper-doi">DOI 10.1016/j.aop.2025.170045</span>
+          </a>
           <a href="https://www.worldscientific.com/doi/10.1142/S0217751X2650003X" target="_blank" rel="noopener">
             <span class="paper-venue">International Journal of Modern Physics A · Vol. 41 · Article 2650003 · 2026</span>
             <strong>Rational Extension of Quantum Anisotropic Oscillator Potentials with Linear and/or Quadratic Perturbations</strong>
@@ -86,28 +86,28 @@ permalink: /about/
     </header>
     <div class="cv-timeline">
       <article>
-        <time>Oct 2022</time>
+        <time>Oct 2022-Now</time>
         <div>
           <h3>Assistant Professor</h3>
-          <p>Model College Dumka, constituent unit of S.K.M. University, Dumka. Teaching PG students at the university and UG students at Model College Dumka.</p>
+          <p>S.K.M. University Dumka and Model College Dumka.</p>
         </div>
       </article>
       <article>
-        <time>Dec 2020</time>
+        <time>Nov 2020-Oct 2022</time>
         <div>
           <h3>Assistant Professor</h3>
-          <p>Deoghar College Deoghar, constituent unit of S.K.M. University, Dumka. Taught physics to undergraduate and postgraduate students.</p>
+          <p>Deoghar College Deoghar, constituent unit of S.K.M. University, Dumka.</p>
         </div>
       </article>
       <article>
-        <time>Mar 2019</time>
+        <time>Mar 2019-Apr 2020</time>
         <div>
           <h3>Project Scientist B</h3>
-          <p>INCOIS, Ministry of Earth Sciences, Government of India. Worked on modelling the Indian Ocean to predict weather conditions over ocean and coastal areas.</p>
+          <p>INCOIS, Ministry of Earth Sciences, Government of India. Worked in ocean state forecast laboratory on modelling the Indian Ocean to predict weather conditions over ocean and coastal areas.</p>
         </div>
       </article>
       <article>
-        <time>Nov 2018</time>
+        <time>Nov 2018-Feb 2019</time>
         <div>
           <h3>Junior Research Fellow</h3>
           <p>Nano Photonics Lab, ISM Dhanbad. Worked on theoretical and experimental modelling of SPR ellipsometry.</p>
@@ -124,15 +124,19 @@ permalink: /about/
       <div class="cv-list">
         <article>
           <h3>IIT Kanpur</h3>
-          <p>Master of Science · Physical Sciences · Computational Physics</p>
+          <p>Master of Science </p>
         </article>
         <article>
           <h3>St. Xavier's College, Ranchi</h3>
-          <p>Bachelor of Science · Physics Honours</p>
+          <p>Bachelor of Science </p>
+        </article>
+        <article>
+          <h3>Intermediate Silli College, Silli</h3>
+          <p>ISC, JAC </p>
         </article>
         <article>
           <h3>Ursuline Convent School, Muri</h3>
-          <p>ICSE · High School</p>
+          <p>ICSE </p>
         </article>
       </div>
     </div>
@@ -142,10 +146,10 @@ permalink: /about/
         <p>Certifications</p>
       </header>
       <div class="cv-list compact">
-        <article><h3>IIT-JAM</h3><p>Physics</p></article>
-        <article><h3>NET-JRF</h3><p>Physics</p></article>
-        <article><h3>GATE</h3><p>Physics</p></article>
-        <article><h3>NGPE</h3><p>State Topper, Jharkhand and Bihar Circle, 2016</p></article>
+        <article><h3>NGPE 2016</h3><p>State Topper, Jharkhand and Bihar Circle, 2016</p></article>        
+        <article><h3>IIT-JAM 2016</h3><p>Physics</p></article>
+        <article><h3>JRF-NET 2017</h3><p>Physics</p></article>
+        <article><h3>GATE 2018</h3><p>Physics</p></article>
       </div>
     </div>
   </section>
