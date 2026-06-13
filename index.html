@@ -9,7 +9,7 @@ title: Home
     <h1>Physics Studio</h1>
     <p class="hero-subtitle">Curated lecture notes, LaTeX derivations, and diagram-rich research resources.</p>
     <div class="hero-actions">
-      <a class="button" href="{{ '/posts/' | relative_url }}">Open Notes</a>
+      <a class="button" href="{{ '/open-notes/' | relative_url }}">Open Notes</a>
       <a class="button secondary" href="{{ '/research/' | relative_url }}">Research</a>
     </div>
   </div>
@@ -44,31 +44,33 @@ title: Home
   {% assign home_posts = paginator.posts | default: site.posts %}
 
   {% for post in home_posts %}
-    {% assign read_minutes = post.content | number_of_words | divided_by: 180 | plus: 1 %}
+    {% unless post.hidden %}
+      {% assign read_minutes = post.content | number_of_words | divided_by: 180 | plus: 1 %}
 
-    <article class="premium-post-card">
-      <a class="premium-post-card-link" href="{{ post.url | relative_url }}">
-        <div class="premium-post-topline">
-          <span>{{ post.categories | first | default: "Study" }}</span>
-          <span>{{ post.date | date: "%d %b %Y" }}</span>
-          <span>{{ read_minutes }} min read</span>
-        </div>
-
-        <h2>{{ post.title }}</h2>
-
-        <p>
-          {{ post.summary | default: post.excerpt | strip_html | normalize_whitespace | truncate: 145 }}
-        </p>
-
-        {% if post.tags.size > 0 %}
-          <div class="premium-tag-row">
-            {% for tag in post.tags limit: 3 %}
-              <span>{{ tag }}</span>
-            {% endfor %}
+      <article class="premium-post-card">
+        <a class="premium-post-card-link" href="{{ post.url | relative_url }}">
+          <div class="premium-post-topline">
+            <span>{{ post.categories | first | default: "Study" }}</span>
+            <span>{{ post.date | date: "%d %b %Y" }}</span>
+            <span>{{ read_minutes }} min read</span>
           </div>
-        {% endif %}
-      </a>
-    </article>
+
+          <h2>{{ post.title }}</h2>
+
+          <p>
+            {{ post.summary | default: post.excerpt | strip_html | normalize_whitespace | truncate: 145 }}
+          </p>
+
+          {% if post.tags.size > 0 %}
+            <div class="premium-tag-row">
+              {% for tag in post.tags limit: 3 %}
+                <span>{{ tag }}</span>
+              {% endfor %}
+            </div>
+          {% endif %}
+        </a>
+      </article>
+    {% endunless %}
   {% endfor %}
 </section>
 

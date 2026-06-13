@@ -31,23 +31,28 @@ permalink: /about/
         <span class="paper-venue">Annals of Physics · Vol. 463 · Article 169623 · 2024</span>
         <strong>Rationally Extended Harmonic Oscillator Potential, Isospectral Family and the Uncertainty Relations</strong>
         <small>Rajesh Kumar, Rajesh Kumar Yadav, Avinash Khare</small>
-        <em>Focus: isospectral oscillator families, rational extensions, and uncertainty relations.</em>
         <span class="paper-doi">DOI 10.1016/j.aop.2024.169623</span>
       </a>
       <a href="https://www.sciencedirect.com/science/article/abs/pii/S0003491625001265" target="_blank" rel="noopener">
         <span class="paper-venue">Annals of Physics · Vol. 479 · Article 170045 · 2025</span>
         <strong>Rational Extension of Anisotropic Harmonic Oscillator Potentials in Higher Dimensions</strong>
         <small>Rajesh Kumar, Rajesh Kumar Yadav, Avinash Khare</small>
-        <em>Focus: higher-dimensional QAHO potentials, exact solutions, and exceptional orthogonal polynomials.</em>
         <span class="paper-doi">DOI 10.1016/j.aop.2025.170045</span>
       </a>
-      <a href="https://www.worldscientific.com/doi/10.1142/S0217751X2650003X" target="_blank" rel="noopener">
-        <span class="paper-venue">International Journal of Modern Physics A · Vol. 41 · Article 2650003 · 2026</span>
-        <strong>Rational Extension of Quantum Anisotropic Oscillator Potentials with Linear and/or Quadratic Perturbations</strong>
-        <small>Rajesh Kumar Yadav, Rajesh Kumar, Avinash Khare</small>
-        <em>Focus: real spectra, degeneracy conditions, and rationally extended perturbed oscillator models.</em>
-        <span class="paper-doi">DOI 10.1142/S0217751X2650003X</span>
-      </a>
+      <details class="cv-more-publications">
+        <summary>
+          <span>More Research Papers</span>
+          <strong>1 additional paper</strong>
+        </summary>
+        <div class="cv-more-publications-panel">
+          <a href="https://www.worldscientific.com/doi/10.1142/S0217751X2650003X" target="_blank" rel="noopener">
+            <span class="paper-venue">International Journal of Modern Physics A · Vol. 41 · Article 2650003 · 2026</span>
+            <strong>Rational Extension of Quantum Anisotropic Oscillator Potentials with Linear and/or Quadratic Perturbations</strong>
+            <small>Rajesh Kumar Yadav, Rajesh Kumar, Avinash Khare</small>
+            <span class="paper-doi">DOI 10.1142/S0217751X2650003X</span>
+          </a>
+        </div>
+      </details>
     </div>
   </section>
 
