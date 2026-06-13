@@ -399,3 +399,117 @@
   color: var(--accent);
   font-weight: 850;
 }
+
+.ref-page {
+  display: grid;
+  gap: 18px;
+  max-width: 960px;
+  margin-inline: auto;
+}
+
+.ref-list {
+  display: grid;
+  gap: 14px;
+  margin: 0 auto;
+  padding-left: clamp(24px, 4vw, 42px);
+  width: min(900px, 100%);
+  color: #272522;
+  font: 800 clamp(1rem, 1.6vw, 1.28rem)/1.35 "Courier New", Courier, monospace;
+}
+
+.ref-list li {
+  padding-left: 4px;
+}
+
+.ref-list li::marker {
+  color: #272522;
+  font-size: .78em;
+}
+
+.ref-list a,
+.ref-list span {
+  color: #215f3c;
+  font-weight: 900;
+  text-decoration: underline;
+  text-decoration-thickness: .055em;
+  text-underline-offset: .1em;
+}
+
+.ref-list a:hover {
+  color: var(--accent);
+  text-decoration-thickness: .09em;
+}
+
+.ref-list ul {
+  display: grid;
+  gap: 10px;
+  margin: 12px 0 0;
+  padding-left: clamp(18px, 3vw, 38px);
+  font-size: .92em;
+  line-height: 1.32;
+}
+
+.ref-list ul li::marker {
+  color: #0b665f;
+}
+
+.ref-list ul a {
+  color: #0b665f;
+  text-decoration-color: currentColor;
+  text-shadow: 0 0 12px rgba(11, 102, 95, .10);
+}
+
+.ref-grid,
+.journal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.ref-card,
+.journal-grid article {
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  min-height: 112px;
+  padding: 18px;
+  border: 1px solid rgba(228, 216, 200, .9);
+  border-radius: 16px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, .96), rgba(248, 244, 236, .84)),
+    radial-gradient(circle at top right, rgba(8, 96, 95, .08), transparent 12rem);
+  color: var(--ink);
+  text-decoration: none;
+  box-shadow:
+    0 14px 34px rgba(35, 31, 26, .08),
+    inset 0 1px 0 rgba(255, 255, 255, .86);
+}
+
+.ref-card:hover,
+.journal-grid article:hover {
+  transform: translateY(-2px);
+  border-color: rgba(8, 96, 95, .28);
+  text-decoration: none;
+}
+
+.ref-feature {
+  min-height: 150px;
+}
+
+.ref-card h2 {
+  margin: 0;
+  text-align: left;
+  font-size: 1.55rem;
+}
+
+.ref-card a,
+.journal-grid a {
+  color: var(--accent);
+  font-weight: 900;
+}
+
+.journal-grid p {
+  margin: 0;
+  color: #5a534c;
+  font: 650 .92rem/1.5 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}

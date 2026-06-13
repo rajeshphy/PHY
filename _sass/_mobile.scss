@@ -50,14 +50,14 @@
   }
 
   .header-icons .icon-link {
-    width: 58px;
-    height: 58px;
+    width: 48px;
+    height: 48px;
   }
 
   .header-icons .icon-link img,
   .header-icons .icon-link svg {
-    width: 37px;
-    height: 37px;
+    width: 30px;
+    height: 30px;
   }
 
   .main-nav {
@@ -300,8 +300,8 @@
 
   .cv-summary {
     margin-top: 10px;
-    font-size: .92rem;
-    line-height: 1.45;
+    font-size: 1.02rem;
+    line-height: 1.48;
   }
 
   .cv-contact {
@@ -479,6 +479,28 @@
 
   .course-grid {
     grid-template-columns: 1fr;
+  }
+
+  .ref-grid,
+  .journal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ref-copy {
+    font-size: 1.2rem;
+    line-height: 1.52;
+  }
+
+  .ref-list {
+    gap: 12px;
+    padding-left: 24px;
+    font-size: .96rem;
+  }
+
+  .ref-list ul {
+    gap: 9px;
+    margin-top: 10px;
+    padding-left: 22px;
   }
 
   .semester-meta-strip {

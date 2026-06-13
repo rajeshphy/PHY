@@ -341,9 +341,15 @@
 
 .cv-summary {
   max-width: 700px;
-  margin-top: 12px;
-  color: #514a43;
-  font: 560 1rem/1.55 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  margin-top: 14px;
+  color: #5a403b;
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-size: clamp(1.05rem, 1.7vw, 1.34rem);
+  font-style: italic;
+  font-weight: 650;
+  line-height: 1.55;
+  letter-spacing: .01em;
+  text-wrap: balance;
 }
 
 .cv-contact,
@@ -790,4 +796,3 @@
 .cv-skills span {
   background: rgba(255, 253, 248, .75);
 }
-

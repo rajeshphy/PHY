@@ -9,6 +9,7 @@
   <nav class="main-nav" aria-label="Main navigation">
     <a {% if page.url == "/" %}class="active"{% endif %} href="{{ '/' | relative_url }}">Home</a>
     <a {% if page.url == "/about/" %}class="active"{% endif %} href="{{ '/about/' | relative_url }}">About</a>
+    <a {% if page.url contains "/ref/" %}class="active"{% endif %} href="{{ '/ref/' | relative_url }}">Ref</a>
     <a {% if page.url == "/tags/" %}class="active"{% endif %} href="{{ '/tags/' | relative_url }}">Tags</a>
     <button class="nav-search-toggle" type="button" aria-expanded="false" aria-controls="nav-search-input">Search</button>
     <label class="nav-search" aria-label="Search posts">
